@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Zrenjanin</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="../img/favicon.png" rel="icon">
+    <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="../css/style_ebooking.css" rel="stylesheet">
+    <link href="../css/style_slideshow.css" rel="stylesheet">
+
+    <script type="text/javascript" src="slide.js"></script>
+
+</head>
+
+<header id="header">
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+            <h1><a style="color:blue" href="#intro" class="scrollto">Ebooking</a></h1>
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a style="color:blue" href="#intro">Home</a></li>
+                <li class="menu-has-children"><a style="color:blue" href="#Touristic Destination">Touristic Destination</a>
+                    <ul>
+                        <li><a href="http://localhost/Problema2/Public/zrenjanin">Zrenjanin</a></li>
+                        <li><a href="http://localhost/Problema2/Public/timisoara">Timisoara</a></li>
+                    </ul>
+                    <li class="menu-has-children"><a style="color:blue" href="http://localhost/Problema2/Public/login">Login</a>
+                        <li class="menu-has-children"><a style="color:blue" href="http://localhost/Problema2/Public/admin">Admin Login</a>
+                            <li class="menu-has-children"><a style="color:blue" href="http://localhost/Problema2/Public/enquiry">Enquiry</a>
+                            </li>
+            </ul>
+        </nav>
+        <!-- #nav-menu-container -->
+    </div>
+</header>
+<!-- #header -->
+
+<body>
+    <section id="intro">
+
+
+        <div class="intro-text">
+
+
+            <h2>Welcome to ebooking</h2>
+            <p>This website can help you find the best places to eat, drink,visit and have a good, relaxing time in Z.</p>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        </div>
+
+
+
+        </div>
+
+
+    </section>
+    <!-- #intro -->
+    <div class="myDiv" align='center'>
+        <div id="demotext">
+            <h2>Search</h2>
+        </div>
+        <form action="reservation.php" method="post">
+            <div class="elem-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="visitor_name" placeholder="Johnny Bravo" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elem-group">
+                <label for="email">Your E-mail</label>
+                <input type="email" id="email" name="visitor_email" placeholder="johnny.bravo@gmail.com" required>
+            </div>
+            <div class="elem-group">
+                <label for="phone">Your Phone</label>
+                <input type="tel" id="phone" name="visitor_phone" placeholder="428-338-3652" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+            </div>
+            <hr>
+            <div class="elem-group inlined">
+                <label for="adult">Adults</label>
+                <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="child">Children</label>
+                <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="checkin-date">Check-in Date</label>
+                <input type="date" id="checkin-date" name="checkin" required>
+            </div>
+            <div class="elem-group inlined">
+                <label for="checkout-date">Check-out Date</label>
+                <input type="date" id="checkout-date" name="checkout" required>
+            </div>
+            <div class="elem-group">
+                <label for="destination">Select destination</label>
+                <select id="destination_preference" name="destination_preference" required>
+        <option value="">Choose a destination from the List</option>
+        <option value="Zrenjanin">Zrenjanin</option>
+        <option value="adjoining">Timisoara</option>
+    </select>
+                <div class="elem-group">
+                    <label for="room-selection">Select Room Preference</label>
+                    <select id="room-selection" name="room_preference" required>
+        <option value="">Choose a Room from the List</option>
+        <option value="connecting">Connecting</option>
+        <option value="adjoining">Adjoining</option>
+        <option value="adjacent">Adjacent</option>
+    </select>
+                </div>
+                <hr>
+                <div class="elem-group">
+                    <label for="message">Anything Else?</label>
+                    <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+                </div>
+                <button type="submit">Book The Rooms</button>
+        </form>
+        </div>
+</body>
+
+</html>
